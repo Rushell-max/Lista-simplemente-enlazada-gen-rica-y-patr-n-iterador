@@ -42,7 +42,7 @@ class Node{
 
     //SETTERS
         void set_value(T);
-        void set_next(Node*);
+        void set_next(Node<T>*);
         
     //GETTERS
 		T get_value() const;
@@ -53,7 +53,7 @@ class Node{
     
     private:
         T value;
-        Node* next;
+        Node<T>* next;
 };
 
 template <typename T>
@@ -99,7 +99,7 @@ T Node<T>::get_value() const {
 }
 
 template <typename T>
-void Node<T>::set_next(Node *_next){
+void Node<T>::set_next(Node<T> *_next){
     this->next = _next;
 }
 
